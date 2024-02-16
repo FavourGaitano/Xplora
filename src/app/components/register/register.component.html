@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<div class="backgroundImage">
+  <div class="register">
+      <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+          <div><h4>Create Your Xplora Account</h4></div>
+          <div>
+              <label>Full name</label>
+              <input type="text" formControlName="name">
+              <div class="error-message" *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched ">Name is required</div>
+          </div>
+          <div>
+              <label>Email</label>
+              <input type="email" formControlName="email">
+              <div class="error-message" *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched && !registerForm.get('email')?.dirty">Email is required</div>
+              <div class="error-message" *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched && registerForm.get('email')?.dirty">Invalid format</div>
+          </div>
+          <!-- <div>
+              <label>Phone number</label>
+              <input type="text" formControlName="phone_number">
+              <div *ngIf="registerForm.get('phone_number')?.invalid && registerForm.get('phone_number')?.touched">Phone number is required</div>
+          </div> -->
+          <!-- <div>
+              <label>Address</label>
+              <input type="text" formControlName="location">
+              <div *ngIf="registerForm.get('location')?.invalid && registerForm.get('location')?.touched">Address is required</div>
+          </div> -->
+          <div>
+              <label>Password</label>
+              <input type="password" formControlName="password">
+              <div class="error-message" *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">Password is required</div>
+              <div class="error-message" *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched && !registerForm.get('password')?.dirty">Must have letters </div>
+          </div>
+          <div>
+              <input type="submit" [disabled]="registerForm.invalid" value="Create Account">
+              <a>Proceed to login?</a>
+          </div>
+      </form>
+  </div>
+</div>
+
