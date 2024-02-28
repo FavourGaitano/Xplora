@@ -13,6 +13,9 @@ import { RouterLink } from '@angular/router';
 })
 export class ViewToursComponent {
 
+  successMessage: string = '';
+  errorMessage: string = '';
+
   toursArr: any[]=[];
   currentPage: number = 1;
   itemsPerPage: number = 4;
@@ -55,9 +58,18 @@ export class ViewToursComponent {
   }
 
   deletetour(id: string) {
-    this.tours.deleteTour(id).subscribe((res) => {
+    this.tours.deleteTour(id).subscribe({
+      next: (res) => {
       console.log(res);
+      this.successMessage = 'Tour deleted successfully.';
+      this.errorMessage = '';
       this.fetchTours();
+      },
+      error: (error) => {
+        console.error(error);
+        this.errorMessage = 'Failed to delete the tour. Please try again.';
+        this.successMessage = '';
+      }
     });
   }
 

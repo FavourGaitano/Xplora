@@ -12,7 +12,7 @@ PUT http://localhost:3001/auth/reset_pwd
 Content-Type: application/json
 
 {
-    "email": "jameskariuki@gmail.com",
+    "email": "favour@gmail.com",
     "password": "1234567890"
 
 }

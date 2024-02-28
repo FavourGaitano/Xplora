@@ -1,4 +1,5 @@
 <div>
+  <div *ngIf="successMessage" class="success-message">{{successMessage}}</div>
   <table class="table-custom">
     <tr class="th-custom">
       <th style ="padding-left:15px;">No.</th>
@@ -15,4 +16,5 @@
       </td>
     </tr>
   </table>
+  <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
 </div>

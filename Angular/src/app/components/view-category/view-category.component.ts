@@ -13,6 +13,9 @@ import { RouterLink } from '@angular/router';
 })
 export class ViewCategoryComponent {
 
+  successMessage: string = '';
+  errorMessage: string = '';
+
   categoriesArr: any[]=[];
 
   constructor(private categories: CategoriesService) {
@@ -35,9 +38,18 @@ export class ViewCategoryComponent {
   }
 
   deleteCategory(id: string) {
-    this.categories.deleteCategory(id).subscribe((res) => {
+    this.categories.deleteCategory(id).subscribe({
+      next: (res) => {
       console.log(res);
+      this.successMessage = 'Category deleted successfully.';
+      this.errorMessage = '';
       this.fetchCategories();
+    },
+    error: (error) => {
+      console.error(error);
+      this.errorMessage = 'Failed to delete the category. Please try again.';
+      this.successMessage = '';
+    }
     });
   }
 

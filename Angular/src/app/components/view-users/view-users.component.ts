@@ -14,6 +14,8 @@ import { RouterLink } from '@angular/router';
 export class ViewUsersComponent {
   usersArr: any[] = [];
   created_at = new Date()
+  successMessage: string = '';
+  errorMessage: string = '';
 
   constructor(private api: ApiService) {
     this.fetchUsers();
@@ -33,9 +35,18 @@ export class ViewUsersComponent {
 
 
   deleteUser(id: string) {
-    this.api.deleteUser(id).subscribe((res) => {
-      console.log(res);
-      this.fetchUsers();
+    this.api.deleteUser(id).subscribe({
+      next: (res) => {
+        console.log(res);
+        this.successMessage = 'User deleted successfully.';
+        this.errorMessage = '';
+        this.fetchUsers();
+      },
+      error: (error) => {
+        console.error(error);
+        this.errorMessage = 'Failed to delete the user. Please try again.';
+        this.successMessage = '';
+      }
     });
   }
 }

@@ -1,6 +1,6 @@
 <div class="card-container">
   <button class="btn-donate" routerLink="/admin/tours"> Add Tour</button>
-
+  <div *ngIf="successMessage" class="success-message">{{successMessage}}</div>
   <div class="container">
 
     <div *ngFor="let tour of paginatedTours; let i = index" class="card">
@@ -22,7 +22,9 @@
         </div>
       </div>
     </div>
+
   </div>
+  <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
   <div class="pagination-controls">
     <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Prev</button>
     <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === maxPage()">Next</button>
