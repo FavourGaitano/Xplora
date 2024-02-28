@@ -1,0 +1,39 @@
+### CREATE REVIEW
+
+POST http://localhost:3001/reviews
+Content-Type: application/json
+
+{
+    "booking_id": "67f9afa9-393b-4d91-b9b1-593256f7fc1f",
+    "rating": "N/A",  
+    "comment": "N/A" ,
+    "user_id": "38bfdf2e-6368-433b-bb1b-8e0a2dc61e6b"
+   
+}
+
+###GET ALL REVIEWS
+GET http://localhost:3001/reviews/get
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgyODI4MzgsImV4cCI6MTcwODU0MjAzOH0.seVgwpRn2apPdeBQB3BibqVyB4XhteUG9v-uGBQOi4Y
+
+###GET REVIEW BY ID
+GET http://localhost:3001/reviews/467c71b6-b951-46a2-97d8-404d3bd33926
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgyODEyODMsImV4cCI6MTcwODU0MDQ4M30.hVoOEa6q62QFiT7U69GkJozXROpczQo9isujlEtmPZU
+
+###UPDATE REVIEW
+PUT http://localhost:3001/reviews/update/467c71b6-b951-46a2-97d8-404d3bd33926
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgzMjk2MjMsImV4cCI6MTcwODU4ODgyM30.IMiIrMJvX3ukhzzAf0t2zMlx2_1AVWkhs9dQCE6R5XU
+
+{
+    "booking_id": "67f9afa9-393b-4d91-b9b1-593256f7fc1f",
+    "rating": "N/A",  
+    "comment": "Favour" ,
+    "user_id": "38bfdf2e-6368-433b-bb1b-8e0a2dc61e6b"
+   
+}
+###DELETE REVIEW
+DELETE http://localhost:3001/reviews/467c71b6-b951-46a2-97d8-404d3bd33926
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgyODI4MzgsImV4cCI6MTcwODU0MjAzOH0.seVgwpRn2apPdeBQB3BibqVyB4XhteUG9v-uGBQOi4Y

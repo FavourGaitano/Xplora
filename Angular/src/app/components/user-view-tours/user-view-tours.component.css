@@ -1,0 +1,244 @@
+*{
+  overflow:hidden;
+}
+
+
+.backgroundImage{
+  background-color:#fcefde;
+  padding-top:2.5vh;
+  height:100%;
+  padding-bottom:5vh;
+
+}
+
+
+
+.tagline{
+  text-align: center;
+  font-size: 20px;
+  font-weight:300;
+  margin-top:0.5%;
+}
+.call-to-action{
+  margin-top:10px;
+   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+
+}
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px; /* Add a gap between elements */
+  width:100%;
+}
+
+.tour-type-select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #EC971F; /* Gold border to match theme */
+  border-radius: 5px;
+  background-color: white;
+  color: #333; /* Dark text for readability */
+  cursor: pointer;
+  width:70%;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #EC971F; /* Gold background to match theme */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  /* margin: 1rem; */
+  overflow: hidden;
+  width: 330px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+.card-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.card-info {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.card-price {
+  font-weight: bold;
+  color: #d97706;
+  font-size: 1.1rem;
+}
+
+.card-category {
+  display: block;
+  font-size: 0.9rem;
+  color: #6b705c;
+  margin-top: 10px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.action-icon {
+  cursor: pointer;
+  color: #007bff;
+  font-size: 1.2rem;
+}
+
+.fa-trash {
+  color: #dc3545;
+}
+
+.action-icon:hover {
+  opacity: 0.8;
+}
+.btn-donate {
+
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: #f0b96d;
+  --btn-bg-2: #f0ad4e;
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 80px;
+  min-height: 40px;
+  font-size: var(--size, 1rem);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  /* margin-top:10px; */
+  /* margin-bottom:10px; */
+  margin-left: 75px;
+  box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+
+
+
+.btn-donate:hover {
+  background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-visible, :active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: none;
+  }
+}
+
+.pagination-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  background-color: #ffbd59; /* Match the color scheme of the Book Now button */
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button[disabled] {
+  background-color: #ffe0b3; /* Lighter shade for disabled state */
+  cursor: default;
+}
+
+.pagination-controls button:not([disabled]):hover {
+  background-color: #ffac30; /* Slightly darker shade on hover */
+}
+
+.pageno {
+  text-align: center;
+  color: #000;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1rem;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1rem;
+}
+

@@ -1,0 +1,18 @@
+<div>
+  <table class="table-custom">
+    <tr class="th-custom">
+      <th style ="padding-left:15px;">No.</th>
+      <th>Name</th>
+
+    </tr>
+    <tr *ngFor="let categories of categoriesArr; let i = index" class="tr-custom">
+      <td class="td-custom">{{i+1}}</td>
+      <td class="td-custom">{{categories.name}}</td>
+
+      <td class="td-custom">
+        <i routerLink="/admin/update-category/{{categories.category_id}}" class="fa-solid fa-pen-to-square action-icon"></i>
+        <i (click)="deleteCategory(categories.category_id)" class="fa-solid fa-trash action-icon" style ="color:red"></i>
+      </td>
+    </tr>
+  </table>
+</div>

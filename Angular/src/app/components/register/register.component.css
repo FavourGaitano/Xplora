@@ -1,0 +1,115 @@
+.backgroundImage{
+  background-image: url('../../../assets/beach.jpg');
+  background-size: cover;
+  background-position: center;
+  height:89.3vh;
+  width: 100vw;
+  padding:0;
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.register {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  width: 130%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register h4 {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register label {
+  margin-bottom: 0.5rem;
+  color: #333;
+  margin-right: 15px;
+  font-size:18px;
+}
+
+.register input[type="text"],
+.register input[type="email"],
+.register input[type="password"] {
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width:65%;
+}
+
+.register input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-left:128px;
+  width: 40%;
+}
+
+.register input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.register a {
+  display: block;
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.register div {
+  position: relative;
+}
+
+.error-message {
+  font-size: 1rem;
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top:15px;
+  text-align: center;
+  display: block;
+  max-width: 400px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 10px rgba(220, 53, 69, 0.3);
+}
+
+.success-message {
+  font-size: 1rem;
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top:15px;
+  text-align: center;
+  display: block;
+  max-width: 400px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 10px rgba(40, 167, 69, 0.3);
+}
+

@@ -1,0 +1,25 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="backgroundImage">
+  <div class="sidebar">
+    <div class="sidebar-content">
+        <a href="#profile"><i class="fas fa-user"></i>Profile</a>
+        <a  routerLink="view-users"><i class="fas fa-users"></i>Users</a>
+        <a  routerLink ="categories"><i class="fa-sharp fa-solid fa-layer-group"></i>Categories</a>
+        <a  routerLink ="view-category"><i class="fa-solid fa-eye"></i> View Categories</a>
+        <a routerLink ="view-bookings"><i class="fas fa-calendar-alt"></i>Bookings</a>
+        <a routerLink ="view-tours"><i class="fas fa-map-marked-alt"></i>Tours</a>
+        <a href="#reviews"><i class="fas fa-star"></i>Reviews</a>
+    </div>
+    <div class="sidebar-footer">
+        <!-- <a  style ="color: #cd7f32;"href="#logout" class="logout-btn">Logout</a> -->
+        <a   style ="color: #cd7f32;" class="logout-btn" routerLink="/logout" (click)="logoutAdmin()">Logout</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+<!-- routerLink="categories" -->

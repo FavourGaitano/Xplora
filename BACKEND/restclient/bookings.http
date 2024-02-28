@@ -1,0 +1,51 @@
+### CREATE BOOKING
+
+POST http://localhost:3001/bookings
+Content-Type: application/json
+
+{
+    "user_id": "13be36a3-1826-42a7-b680-7018f4418ff7",
+    "tour_id": "724cee61-40de-4534-adb3-f53d991a7d50"
+    
+    
+    
+
+}
+
+###GET ALL BOOKINGS
+GET http://localhost:3001/bookings/get
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4YmZkZjJlLTYzNjgtNDMzYi1iYjFiLThlMGEyZGM2MWU2YiIsImVtYWlsIjoiZmF2b3VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzA4ODc1MzU5LCJleHAiOjE3MDkxMzQ1NTl9.Vukp6u3ojG8Az5oCwTzGGW_kSrOzeAtiE4HNjv3wP9c
+
+###GET BOOKING BY BOOKING ID
+GET http://localhost:3001/bookings/2954e2c4-e6d0-4636-a808-d39946d9c97d
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgyODEyODMsImV4cCI6MTcwODU0MDQ4M30.hVoOEa6q62QFiT7U69GkJozXROpczQo9isujlEtmPZU
+
+###UPDATE BOOKINGS
+PUT http://localhost:3001/bookings/update/67f9afa9-393b-4d91-b9b1-593256f7fc1f
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgzMjk2MjMsImV4cCI6MTcwODU4ODgyM30.IMiIrMJvX3ukhzzAf0t2zMlx2_1AVWkhs9dQCE6R5XU
+
+{
+   
+    "user_id": "38bfdf2e-6368-433b-bb1b-8e0a2dc61e6b",
+    "tour_id": "8f808b74-8417-471d-a905-2ec2fd79a0f7",
+    
+    
+}
+
+###DELETE BOOKING
+DELETE http://localhost:3001/bookings/2954e2c4-e6d0-4636-a808-d39946d9c97d
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgyODI4MzgsImV4cCI6MTcwODU0MjAzOH0.seVgwpRn2apPdeBQB3BibqVyB4XhteUG9v-uGBQOi4Y
+
+###CANCEL BOOKING
+PUT http://localhost:3001/bookings/cancel/04d58d22-3c38-4a7f-8134-f400bae70f48
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4YmZkZjJlLTYzNjgtNDMzYi1iYjFiLThlMGEyZGM2MWU2YiIsImVtYWlsIjoiZmF2b3VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzA4OTE5MDM4LCJleHAiOjE3MDkxNzgyMzh9.WGGwTDvsG7KB1oj9HUcHYYpR-byGPOmI5_i6gd3dItQ
+
+###GET BOOKING BY USER ID
+GET http://localhost:3001/bookings/userID/38bfdf2e-6368-433b-bb1b-8e0a2dc61e6b
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4YmZkZjJlLTYzNjgtNDMzYi1iYjFiLThlMGEyZGM2MWU2YiIsImVtYWlsIjoiZmF2b3VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzA4OTE5MDM4LCJleHAiOjE3MDkxNzgyMzh9.WGGwTDvsG7KB1oj9HUcHYYpR-byGPOmI5_i6gd3dItQ

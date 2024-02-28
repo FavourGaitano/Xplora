@@ -1,0 +1,24 @@
+POST http://localhost:3001/auth
+Content-Type: application/json
+
+{
+    "email": "favour@gmail.com",
+    "password": "123456"
+
+}
+
+####
+PUT http://localhost:3001/auth/reset_pwd
+Content-Type: application/json
+
+{
+    "email": "jameskariuki@gmail.com",
+    "password": "1234567890"
+
+}
+
+####
+GET http://localhost:3001/auth/checkdetails
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4YmZkZjJlLTYzNjgtNDMzYi1iYjFiLThlMGEyZGM2MWU2YiIsImVtYWlsIjoiZmF2b3VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzA4ODc1MzU5LCJleHAiOjE3MDkxMzQ1NTl9.Vukp6u3ojG8Az5oCwTzGGW_kSrOzeAtiE4HNjv3wP9c
+

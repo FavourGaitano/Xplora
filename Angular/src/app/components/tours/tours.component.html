@@ -1,0 +1,74 @@
+<div class="main">
+  <div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+  <div class="register">
+
+
+    <form [formGroup]="ToursForm" (ngSubmit)="ToursUser()">
+      <div><h4 style ="margin-bottom:15px" >Create Tour</h4></div>
+
+      <div>
+        <label>Title</label>
+        <input type="text" formControlName="title" id="">
+        <div *ngIf="ToursForm.get('title')?.invalid && ToursForm.get('title')?.touched" class="error-message">Title is required</div>
+    </div>
+
+      <div>
+        <label>Image</label>
+        <input type="text" formControlName="image" id="">
+        <div *ngIf="ToursForm.get('image')?.invalid && ToursForm.get('image')?.touched" class="error-message">Image is required</div>
+    </div>
+
+      <div>
+        <label>Description</label>
+        <input type="text" formControlName="description" id="">
+        <div *ngIf="ToursForm.get('description')?.invalid && ToursForm.get('description')?.touched" class="error-message">Description is required</div>
+    </div>
+
+    <div>
+      <label>Location</label>
+      <input type="text" formControlName="location" id="">
+      <div *ngIf="ToursForm.get('location')?.invalid && ToursForm.get('location')?.touched" class="error-message">Location is required</div>
+  </div>
+
+  <div>
+    <label>Start Date</label>
+    <input type="date" formControlName="start_date" id="">
+    <div *ngIf="ToursForm.get('start_date')?.invalid && ToursForm.get('start_date')?.touched" class="error-message">Start Date is required</div>
+  </div>
+
+  <div>
+    <label>End Date</label>
+    <input type="date" formControlName="end_date" id="">
+    <div *ngIf="ToursForm.get('end_date')?.invalid && ToursForm.get('end_date')?.touched" class="error-message">End Date is required</div>
+  </div>
+
+  <div>
+    <label>Price</label>
+    <input type="text" formControlName="price" id="">
+    <div *ngIf="ToursForm.get('price')?.invalid && ToursForm.get('price')?.touched" class="error-message">Price is required</div>
+  </div>
+
+  <!-- <div>
+    <label>Category</label>
+    <input type="text" formControlName="category_id" id="">
+    <div *ngIf="ToursForm.get('category_id')?.invalid && ToursForm.get('category_id')?.touched" class="error-message">Category is required</div>
+  </div> -->
+
+  <div class= "select" >
+    <label for="category">Category</label>
+    <select class= "select" formControlName="category_id" id="category" class="select-custom">
+      <option class= "select" value="">Select a category</option>
+    <option *ngFor="let category of categoriesArr" [value]="category.category_id">{{ category.name }}</option>
+    </select>
+    <div *ngIf="ToursForm.get('category_id')?.invalid && ToursForm.get('category_id')?.touched" class="error-message">Category is required</div>
+  </div>
+
+
+      <div>
+        <input type="submit" [disabled]="ToursForm.invalid" value="Submit">
+      </div>
+    </form>
+  </div>
+</div>

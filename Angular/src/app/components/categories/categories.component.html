@@ -1,0 +1,15 @@
+<div class="category">
+  <form [formGroup]="categoryForm" (ngSubmit)="createCategory()">
+    <div><h4>Create Category</h4></div>
+
+    <div>
+      <label>Name</label>
+      <input type="name" formControlName="name">
+      <div class="error-message" *ngIf="categoryForm.get('name')?.invalid && categoryForm.get('name')?.touched && !categoryForm.get('name')?.dirty">Name is required</div>
+    </div>
+
+    <div>
+      <input type="submit" [disabled]="categoryForm.invalid" value="Submit">
+    </div>
+  </form>
+</div>

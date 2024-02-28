@@ -1,0 +1,31 @@
+<div class="card-container">
+  <button class="btn-donate" routerLink="/admin/tours"> Add Tour</button>
+
+  <div class="container">
+
+    <div *ngFor="let tour of paginatedTours; let i = index" class="card">
+      <div class="card-image">
+        <img src="{{ tour.image }}" alt="{{ tour.title }}">
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">{{ tour.title }}</h3>
+        <p class="card-description">{{ tour.description }}</p>
+        <p class="card-description" style="font-weight:600">{{ tour.location }}</p>
+        <div class="card-info">
+          <span class="card-date">{{ tour.start_date }} - {{ tour.end_date }}</span>
+          <div class="card-price">FROM KSH{{ tour.price }}</div>
+          <span class="card-category">{{ tour.CategoryName }}</span>
+        </div>
+        <div class="card-actions">
+          <i routerLink="/admin/update-tour/{{tour.tour_id}}" class="fa-solid fa-pen-to-square action-icon"></i>
+          <i (click)="deletetour(tour.tour_id)" class="fa-solid fa-trash action-icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagination-controls">
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Prev</button>
+    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === maxPage()">Next</button>
+  </div>
+  <div class="pagination-info">Page {{ currentPage }} of {{ maxPage() }}</div>
+</div>

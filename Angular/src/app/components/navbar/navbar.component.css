@@ -1,0 +1,101 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 25px 100px;
+}
+
+.logo {
+  font-size: 30px;
+  color: black;
+  font-weight:600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  padding: 0 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #555;
+}
+
+.special {
+  background-color: #f0ad4e;
+  color: #fff;
+  padding:6px 15px;
+  border-radius: 5px;
+  box-shadow: 0 -2px 5px #f0ad4e;
+
+}
+
+.special:hover,
+.special:focus {
+  background-color: #f0ad4e;
+}
+
+.dropbtn {
+  background-color: transparent; /* Make the background transparent */
+  border: none; /* Remove border */
+  cursor: pointer;
+  margin-left: 20px;
+  font-size: 16px;
+
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #f0ad4e}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+}
+
+
+.fas {
+  font-size: 1.3rem; /* You can adjust the size as needed */
+}

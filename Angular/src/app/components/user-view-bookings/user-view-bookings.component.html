@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div class="main">
+  <div *ngIf="successMessage" class="success-message">{{successMessage}}</div>
+  <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+  <div class="container">
+    <div *ngFor="let booking of paginatedBookings" class="card">
+      <div class="card-content">
+        <div class="card-image">
+          <img [src]="booking.tour_image" alt="{{ booking.tour_name }}">
+        </div>
+        <p class="card-description">{{ booking.user_name }}</p>
+        <p class="card-description">{{ booking.tour_name }}</p>
+        <!-- <p class="card-description">{{ booking.isreviewsopen}}</p> -->
+        <div class="card-info">
+          <!-- <span class="card-date">{{ booking.booking_date | date: 'mediumDate' }}</span> -->
+        </div>
+        <div class="card-actions">
+          <button (click)="cancelBooking(booking.booking_id)" style="color: red; border: none; background: none; cursor: pointer;">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="pagination-controls">
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Prev</button>
+    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === maxPage()">Next</button>
+  </div>
+  <div class="pagination-info">Page {{ currentPage }} of {{ maxPage() }}</div>
+</div>

@@ -1,0 +1,40 @@
+### CREATE USER
+
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "name": "Buyanzi Gaitano",
+    "email": "devbuyanzi@gmail.com",
+     
+    "password": "123456"
+    
+}
+
+###GET ALL USERS
+GET http://localhost:3001/users/get
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4YmZkZjJlLTYzNjgtNDMzYi1iYjFiLThlMGEyZGM2MWU2YiIsImVtYWlsIjoiZmF2b3VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzA4ODc1MzU5LCJleHAiOjE3MDkxMzQ1NTl9.Vukp6u3ojG8Az5oCwTzGGW_kSrOzeAtiE4HNjv3wP9c
+
+###GET USER BY ID
+GET http://localhost:3001/users/28a5e7f3-adf2-4d97-b099-ac09a3a79a86
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4YmZkZjJlLTYzNjgtNDMzYi1iYjFiLThlMGEyZGM2MWU2YiIsImVtYWlsIjoiZmF2b3VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzA4ODc1MzU5LCJleHAiOjE3MDkxMzQ1NTl9.Vukp6u3ojG8Az5oCwTzGGW_kSrOzeAtiE4HNjv3wP9c
+
+###UPDATE USER
+PUT http://localhost:3001/users/update/28a5e7f3-adf2-4d97-b099-ac09a3a79a86
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4YmZkZjJlLTYzNjgtNDMzYi1iYjFiLThlMGEyZGM2MWU2YiIsImVtYWlsIjoiZmF2b3VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzA4NTk4ODE0LCJleHAiOjE3MDg4NTgwMTR9.2Dns0BIC3sZ3i8NWUzDEIvg-sbAqJhVJnzRNGMA8hiU
+
+{
+    "name": "Favour Buyanzi",
+    "email": "favourbuyanzi@gmail.com",
+    
+    "password": "123456"
+    
+}
+
+###DELETE USER
+DELETE http://localhost:3001/users/28a5e7f3-adf2-4d97-b099-ac09a3a79a86
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgyODI4MzgsImV4cCI6MTcwODU0MjAzOH0.seVgwpRn2apPdeBQB3BibqVyB4XhteUG9v-uGBQOi4Y

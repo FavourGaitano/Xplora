@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to XPLORA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        body { font-family: 'Inter', sans-serif; font-size:16px; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { max-width: 600px; margin: 20px auto; background: #ffffff; }
+        .header { background-color: #f0ad4e; color: white; padding: 10px 20px; text-align: center; }
+        .content { padding: 20px; }
+        .footer { background-color: #f4f4f4; color: #888888; padding: 10px 20px; text-align: center; font-size: 0.8em; }
+        .button { background-color: #f0ad4e; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; }
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to XPLORA, <%= name %></h1>
+        </div>
+        <div class="content">
+            <p>Hi, <%= name %>,</p>
+            <p>Welcome aboard! We're thrilled to have you explore with us. <br>XPLORA is all about unlocking new adventures and providing you with the tools to discover and engage with the world around you.</p>
+            <!-- <p>
+                <img src="https://example.com/path-to-your-welcome-image.jpg" alt="Welcome to XPLORA">
+            </p> -->
+            <p>
+                <!-- Our team is dedicated to ensuring your experience is as enriching and enjoyable as possible. Should you have any questions or need guidance, we're here to support you every step of the way. -->
+                <!-- <br> -->
+                <!-- Let's embark on this exciting journey together with XPLORA! -->
+            </p>
+            <p>Warm regards,<br>The XPLORA Team</p>
+        </div>
+        <div class="footer">
+            This is an automated message, please do not reply directly to this email. For assistance, please reach out to us at <a href="mailto:support@xplora.com">support@xplora.com</a>.
+        </div>
+    </div>
+</body>
+</html>

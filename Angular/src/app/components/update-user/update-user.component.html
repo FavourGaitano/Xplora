@@ -1,0 +1,29 @@
+<div class="register">
+  <form [formGroup]="updateUserForm" (ngSubmit)="updateUser()">
+      <!-- <div><h2 class="font-bold text-center">{{title}}</h2></div> -->
+      <div *ngIf="successMessage" class="success-message">{{successMessage}}</div>
+      <div>
+          <label>Full name</label>
+          <input type="text" formControlName="name" id="">
+          <div *ngIf="updateUserForm.get('name')?.invalid && updateUserForm.get('name')?.touched" class="error-message">Name is required</div>
+      </div>
+      <div>
+          <label>Email</label>
+          <input type="email" formControlName="email" id="">
+          <div *ngIf="updateUserForm.get('email')?.invalid && updateUserForm.get('email')?.touched && !updateUserForm.get('email')?.dirty" class="error-message">Email is required</div>
+          <div *ngIf="updateUserForm.get('email')?.invalid && updateUserForm.get('email')?.touched && updateUserForm.get('email')?.dirty" class="error-message">Invalid format</div>
+      </div>
+      <!-- <div>
+          <label>Password</label>
+          <input type="password" formControlName="password" id="">
+          <div *ngIf="updateUserForm.get('password')?.invalid && updateUserForm.get('password')?.touched" class="error-message">Password is required</div>
+          <div *ngIf="updateUserForm.get('password')?.invalid && updateUserForm.get('password')?.touched && !updateUserForm.get('password')?.dirty" class="error-message">Must have letters</div>
+      </div> -->
+      <div>
+          <input type="submit" [disabled]="updateUserForm.invalid" value="Update">
+          <!-- <a>Proceed to login?</a> -->
+      </div>
+      <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+  </form>
+</div>
+

@@ -1,0 +1,35 @@
+### CREATE CATEGORY
+
+POST http://localhost:3001/categories
+Content-Type: application/json
+
+{
+    "name": "Weekend Getaways",
+    "description": "N/A"   
+}
+
+###GET ALL CATEGORIES
+GET http://localhost:3001/categories/get
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4YmZkZjJlLTYzNjgtNDMzYi1iYjFiLThlMGEyZGM2MWU2YiIsImVtYWlsIjoiZmF2b3VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzA4ODUxMzc3LCJleHAiOjE3MDkxMTA1Nzd9.x_9M0egXiVBfUM6WKBBvCuuKr4fiA9Lyarq2EECwxZ8
+
+###GET CATEGORY BY ID
+GET http://localhost:3001/categories/b4574dcf-e6d5-448c-9337-23cbd3766799
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgyODEyODMsImV4cCI6MTcwODU0MDQ4M30.hVoOEa6q62QFiT7U69GkJozXROpczQo9isujlEtmPZU
+
+###UPDATE CATEGORY
+PUT http://localhost:3001/categories/update/b4574dcf-e6d5-448c-9337-23cbd3766799
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgzMjk2MjMsImV4cCI6MTcwODU4ODgyM30.IMiIrMJvX3ukhzzAf0t2zMlx2_1AVWkhs9dQCE6R5XU
+
+{
+    "name": "Hikes",
+    "description": "N/A"
+    
+}
+
+###DELETE CATEGORY
+DELETE http://localhost:3001/categories/b4574dcf-e6d5-448c-9337-23cbd3766799
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgyODI4MzgsImV4cCI6MTcwODU0MjAzOH0.seVgwpRn2apPdeBQB3BibqVyB4XhteUG9v-uGBQOi4Y

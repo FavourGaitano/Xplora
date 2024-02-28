@@ -1,0 +1,47 @@
+### CREATE TOUR
+
+POST http://localhost:3001/tours
+Content-Type: application/json
+
+{
+    "title": "Mt.Longonot",
+    "image": "N/A",  
+    "description": "N/A", 
+    "location": "N/A", 
+    "start_date": "N/A", 
+    "end_date": "N/A", 
+    "price": "N/A", 
+    "category_id": "396e54c7-a598-4254-9072-874fa3d6d54f"
+}
+
+###GET ALL TOURS
+GET http://localhost:3001/tours/get
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4YmZkZjJlLTYzNjgtNDMzYi1iYjFiLThlMGEyZGM2MWU2YiIsImVtYWlsIjoiZmF2b3VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzA4ODc1MzU5LCJleHAiOjE3MDkxMzQ1NTl9.Vukp6u3ojG8Az5oCwTzGGW_kSrOzeAtiE4HNjv3wP9c
+
+###GET TOUR BY ID
+GET http://localhost:3001/tours/06eec638-5d1e-456e-a026-c6456972d40e
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4YmZkZjJlLTYzNjgtNDMzYi1iYjFiLThlMGEyZGM2MWU2YiIsImVtYWlsIjoiZmF2b3VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzA4ODc1MzU5LCJleHAiOjE3MDkxMzQ1NTl9.Vukp6u3ojG8Az5oCwTzGGW_kSrOzeAtiE4HNjv3wP9c
+
+
+
+###UPDATE TOUR
+PUT http://localhost:3001/tours/update/06eec638-5d1e-456e-a026-c6456972d40e
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgzMjk2MjMsImV4cCI6MTcwODU4ODgyM30.IMiIrMJvX3ukhzzAf0t2zMlx2_1AVWkhs9dQCE6R5XU
+
+{
+    "title": "Mt.Evereast",
+    "image": "N/A",  
+    "description": "N/A", 
+    "location": "N/A", 
+    "start_date": "N/A", 
+    "end_date": "N/A", 
+    "price": "N/A",  
+    "category_id": "396e54c7-a598-4254-9072-874fa3d6d54f"
+}
+###DELETE CATEGORY
+DELETE http://localhost:3001/tours/06eec638-5d1e-456e-a026-c6456972d40e
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDgyODI4MzgsImV4cCI6MTcwODU0MjAzOH0.seVgwpRn2apPdeBQB3BibqVyB4XhteUG9v-uGBQOi4Y

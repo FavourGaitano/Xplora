@@ -1,0 +1,5 @@
+CREATE OR ALTER PROCEDURE getAllReviews
+AS
+BEGIN
+    SELECT * FROM Reviews
+END

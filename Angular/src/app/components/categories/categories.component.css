@@ -1,0 +1,56 @@
+.category {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.category form {
+  background: #fff8f0; /* Off-white background matching the theme */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 40%;
+}
+
+.category h4 {
+  text-align: center;
+  color: #5a4224; /* Dark brown color matching the theme */
+  margin-bottom: 1rem;
+}
+
+.category label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #5a4224; /* Dark brown color matching the theme */
+}
+
+.category input[type=name],
+.category input[type=submit] {
+  width: 95%; /* Makes all inputs the same width */
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: auto; /* Centers the inputs */
+  margin-right: auto; /* Centers the inputs */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.category input[type=submit] {
+  background-color: #d97706; /* Button color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width:98%;
+}
+
+.category input[type=submit]:hover,
+.category input[type=submit]:focus {
+  background-color: #b65c00; /* Darker shade for hover/focus */
+}
+
+.category .error-message {
+  color: #ff6b6b; /* Error message color */
+  font-size: 0.85rem;
+  text-align: center;
+}

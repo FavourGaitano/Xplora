@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.backgroundImage{
+  /* background-image: url('../../../assets/beach.jpg'); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/beach.jpg');
+  /* background-size: cover; */
+  background-position: center;
+  background-repeat: repeat-y;
+  height:99.95vh;
+  width: 99.98vw;
+  padding:0;
+  position:relative;
+
+
+}
+/* .main-content{
+  background-color:white;
+  height: 100%;
+  /* width:80vw; */
+ 
+
+
+.sidebar {
+  position: relative;
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #cd7f32;
+  /* background-image: url('path_to_your_background_image'); */
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 30px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+.sidebar-content a, .sidebar-footer a {
+  padding: 20px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: background-color 0.3s, transform 0.3s;
+  color:white;
+}
+
+.sidebar a i {
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.sidebar-content a:hover, .sidebar-footer a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(10px);
+}
+
+.sidebar a:hover i {
+  transform: scale(1.1);
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 1px 16px;
+}
+
+.logout-btn {
+  display: block;
+  text-align: center;
+  margin: 50px 20px;
+  padding: 10px 15px;
+  background-color:white;
+  color: #cd7f32;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logout-btn:hover {
+  background-color: #1a2026;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+}
+
+/* @media (max-width: 568px) {
+  .sidebar {
+    width: 150px;
+    transform: translateX(-150px);
+  }
+
+  .main-content,
+  .top-bar {
+    margin-left: 0;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+} */

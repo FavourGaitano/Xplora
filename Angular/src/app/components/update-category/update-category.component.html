@@ -1,0 +1,19 @@
+<div class="register">
+
+  <form [formGroup]="updateCategoryForm" (ngSubmit)="updateCategory()">
+      <!-- <div><h2 class="font-bold text-center">{{title}}</h2></div> -->
+      <div *ngIf="successMessage" class="success-message">{{successMessage}}</div>
+      <div>
+          <label>Name</label>
+          <input type="text" formControlName="name" id="">
+          <div *ngIf="updateCategoryForm.get('name')?.invalid && updateCategoryForm.get('name')?.touched" class="error-message">Name is required</div>
+      </div>
+
+      <div>
+          <input type="submit" [disabled]="updateCategoryForm.invalid" value="Update">
+          <!-- <a>Proceed to login?</a> -->
+      </div>
+      <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+  </form>
+</div>
+
